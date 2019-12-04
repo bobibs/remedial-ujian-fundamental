@@ -8,7 +8,7 @@ hitungTahun = (populasiAwal, persenKenaikan, imigran, maksimalPopulasi) => {
 	} while (penduduk < maksimalPopulasi);
 	return tahun + ' tahun';
 };
-// console.log(berapatahun(1000, 5, 50, 1200));
+// console.log(hitungTahun(1000, 5, 50, 1200));
 
 // Soal Nomor 2
 segitigaAngka = input => {
