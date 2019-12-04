@@ -20,18 +20,18 @@ segitigaAngka = input => {
 			output += ' ';
 		}
 		for (c = 0; c <= a; c++) {
-			if (angka % 2 === 0) {
-				output += ' ';
-			} else {
+			if (angka % 2 === 1) {
 				output += `${angka}`;
+			} else {
+				output += ' ';
 			}
 			angka++;
 		}
 		for (d = 1; d <= a; d++) {
-			if (angka % 2 === 0) {
-				output += ' ';
-			} else {
+			if (angka % 2 === 1) {
 				output += `${angka}`;
+			} else {
+				output += ' ';
 			}
 			angka++;
 		}
@@ -43,7 +43,7 @@ segitigaAngka = input => {
 	return output;
 };
 
-console.log(segitigaAngka(5, 2));
+// console.log(segitigaAngka(5));
 
 // Soal Nomor 3
 jualTiket = params => {
