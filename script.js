@@ -1,12 +1,22 @@
 // Soal Nomor 1
+hitungTahun = (populasiAwal, persenKenaikan, imigran, maksimalPopulasi) => {
+	let penduduk = populasiAwal;
+	let tahun = 0;
+	do {
+		penduduk += imigran + penduduk * (persenKenaikan / 100);
+		tahun++;
+	} while (penduduk < maksimalPopulasi);
+	return tahun + ' tahun';
+};
+// console.log(berapatahun(1000, 5, 50, 1200));
 
 // Soal Nomor 2
-segitigaAngka = tinggi => {
+segitigaAngka = input => {
 	let output = '';
 	let angka = 1;
 
-	for (a = 0; a < tinggi; a++) {
-		for (b = tinggi; b > a; b--) {
+	for (a = 0; a < input; a++) {
+		for (b = input; b > a; b--) {
 			output += ' ';
 		}
 		for (c = 0; c <= a; c++) {
@@ -25,7 +35,7 @@ segitigaAngka = tinggi => {
 			}
 			angka++;
 		}
-		if (a < tinggi - 1) {
+		if (a < input - 1) {
 			output += '\n';
 		}
 		angka += 1;
@@ -33,7 +43,7 @@ segitigaAngka = tinggi => {
 	return output;
 };
 
-console.log(segitigaAngka(5));
+console.log(segitigaAngka(5, 2));
 
 // Soal Nomor 3
 jualTiket = params => {
@@ -43,7 +53,9 @@ jualTiket = params => {
 	for (i = 0; i < params.length; i++) {
 		if (params[i] - harga <= kas) {
 			kas += params[i] - kas;
-			console.log('Terimakasih telah membeli tiket di Vasya');
+			console.log(
+				`Terimakasih telah membeli tiket di Vasya dengan uang ${params[i]}`
+			);
 		} else {
 			console.log(`Maaf, Vasya tidak punya kembalian untuk uang ${params[i]}`);
 		}
